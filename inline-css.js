@@ -39,7 +39,6 @@ const optimize = async function () {
     const optimizedPath = pathname.replace("dist", "optimized");
     // remove external styles, since critters doesn't actually remove the inline styles
     const htmlNoExternalStyle = removeExternalStyles(res);
-    console.log(htmlNoExternalStyle);
     const minifiedHtml = await minify(htmlNoExternalStyle, {
       removeComments: true,
       minifyJS: true,
