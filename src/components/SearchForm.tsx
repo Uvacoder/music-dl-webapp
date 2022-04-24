@@ -16,6 +16,7 @@ export default function SearchForm() {
       <input
         id="search"
         type="text"
+        autocomplete="off"
         value={searchTerm}
         onInput={handleOnInput}
       />

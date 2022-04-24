@@ -8,7 +8,7 @@
 	--user-font-scale: 1rem - 16px;
 	font-size: clamp(0.875rem, 0.4626rem + 1.0309vw + var(--user-font-scale), 1.125rem);
 	--color-light: #f3f4f6;
-	--color-light: #1f2937;
+	--color-dark: #161414;
 }
 
 body {
@@ -17,8 +17,8 @@ body {
 	min-height: 100vh;
 	display: grid;
 	justify-content: center;
-	background: #111827;
-	color: #fff;
+	background: var(--color-dark);
+	color: var(--color-light);
 }
 
 a {
@@ -26,9 +26,9 @@ a {
 }
 
 input {
-	border: 1px solid white;
+	border: 1px solid var(--color-light);;
 	border-radius: 2px;
 	background: transparent;
-	color: #fff;
+	color: var(--color-light);
 	padding: 4px;
 }
