@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
-import '../styles/home.css';
-import PreactCounter from '../components/PreactCounter.jsx';
+import SearchForm from '../components/SearchForm.tsx';
 
 let title = 'Music Download';
 
@@ -22,21 +21,17 @@ let title = 'Music Download';
 			max-width: min(100%, 68ch);
 		}
 	</style>
-	<style is:global>
-		pre {
-			padding: 1rem;
-		}
-	</style>
+
 </head>
 <body>
 	<main>
-		<header>
+		<header class="mb-4">
 			<div>
-				<h1>Welcome to <a href="https://music.majder.com"></a></h1>
+				<h1 class="font-bold">Welcome to <a href="https://music.majder.com">Music download</a></h1>
 			</div>
 		</header>
 
-		<PreactCounter client:visible />
+		<SearchForm client:visible />
 	</main>
 </body>
 </html>
