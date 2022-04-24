@@ -6,7 +6,7 @@ const { walk } = require("@root/walk");
 const { minify } = require("html-minifier-terser");
 
 function removeExternalStyles(html) {
-  return html.replace(/<link rel="stylesheet" href=".*\.css"[^>]+>/g, "");
+  return html.replaceAll(/<link rel="stylesheet" href=".*\.css">/g, "");
 }
 
 const optimize = async function () {
@@ -39,6 +39,7 @@ const optimize = async function () {
     const optimizedPath = pathname.replace("dist", "optimized");
     // remove external styles, since critters doesn't actually remove the inline styles
     const htmlNoExternalStyle = removeExternalStyles(res);
+    console.log(htmlNoExternalStyle);
     const minifiedHtml = await minify(htmlNoExternalStyle, {
       removeComments: true,
       minifyJS: true,
